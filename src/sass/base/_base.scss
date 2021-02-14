@@ -1,0 +1,32 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  // This defines what 1rem is
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+}
+
+body {
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+
+  //background-image: url("~@/assets/images/illustration-box-desktop.svg");
+  //background-repeat: repeat;
+
+  // fonts
+  font-family: 'Kumbh Sans', sans-serif;
+  font-weight: $font-weight-normal;
+  font-size: 1.2rem;
+
+  background: linear-gradient(rgba($soft-violet, .8), rgba($soft-blue, .8));
+
+}
+
+.attribution { font-size: 11px; }
+.attribution a { color: hsl(228, 45%, 44%); }

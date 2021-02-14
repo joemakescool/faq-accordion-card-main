@@ -1,4 +1,25 @@
-body {
-  background-image: url("~@/assets/images/illustration-box-desktop.svg");
-  background-repeat: repeat;
-}
+//-- ABSTRACTS --//
+@import "abstracts/colors";
+
+
+//-- BASE --//
+@import "base/typography";
+@import "base/base";
+
+
+//-- COMPONENTS --//
+@import "components/faq";
+@import "components/faqs-container";
+@import "components/faqs-logo";
+
+
+//-- LAYOUT --//
+@import "layout/faqs-box";
+
+
+//-- VIEWS --//
+@import "views/home";
+
+
+
+

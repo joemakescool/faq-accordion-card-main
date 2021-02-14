@@ -1,0 +1,21 @@
+.faqs-logo {
+  display: flex;
+  flex-direction: column;
+  background-image: url("~@/assets/images/bg-pattern-desktop.svg");
+  background-size: cover;
+  background-position: -300px 85%;
+  background-repeat: no-repeat;
+}
+
+.woman-logo {
+  z-index: 2;
+}
+
+.box-logo {
+  width: 50%;
+  height: 50%;
+  background-image: url("~@/assets/images/illustration-box-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 3;
+}

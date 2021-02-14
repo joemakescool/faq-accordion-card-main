@@ -1,18 +1,22 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <FaqsContainer></FaqsContainer>
+
+<!--    <div class="attribution">-->
+<!--      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.-->
+<!--      Coded by <a href="#">Joe Barker</a>.-->
+<!--    </div>-->
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import FaqsContainer from '@/components/FaqsContainer'
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    FaqsContainer
   }
 }
 </script>
