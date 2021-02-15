@@ -1,2 +1,10 @@
 .faqs-box {
+  overflow: hidden;
+
+
+
+  &__title {
+    margin-bottom: 2.5rem;
+    font-size: 3.3rem;
+  }
 }

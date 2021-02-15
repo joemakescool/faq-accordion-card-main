@@ -1,9 +1,13 @@
 <template>
+  <div class="container">
 
-  <div class="faqs-logo">
-    <img class="woman-logo" src="../assets/images/illustration-woman-online-desktop.svg" alt="">
+    <div class="faqs-logo">
+      <div class="woman-logo"></div>
+    </div>
+
+    <div class="box-logo"></div>
+
   </div>
-
 </template>
 
 <script>

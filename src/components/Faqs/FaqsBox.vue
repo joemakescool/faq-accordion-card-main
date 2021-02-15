@@ -1,5 +1,8 @@
 <template>
-<div class="faqs-box">
+
+  <div class="faqs-box">
+    <h1 class="faqs-box__title">FAQ</h1>
+
   <Faq id="faq1">
     <template v-slot:question>
       How many team members can I invite?
@@ -10,6 +13,9 @@
       team members for the Premium plan.
     </template>
   </Faq>
+    <div class="faq-box__divider">
+
+    </div>
 
   <Faq id="faq2">
     <template v-slot:question>
@@ -20,6 +26,10 @@
       No more than 2GB. All files in your account must fit your allotted storage space.
     </template>
   </Faq>
+
+    <div class="faq-box__divider">
+
+    </div>
 
   <Faq id="faq3">
     <template v-slot:question>
@@ -32,6 +42,10 @@
     </template>
   </Faq>
 
+    <div class="faq-box__divider">
+
+    </div>
+
   <Faq id="faq4">
     <template v-slot:question>
       Can I cancel my subscription?
@@ -41,6 +55,10 @@
       Yes! Send us a message and we’ll process your request no questions asked.
     </template>
   </Faq>
+
+    <div class="faq-box__divider">
+
+    </div>
 
   <Faq id="faq5">
     <template v-slot:question>
@@ -52,7 +70,10 @@
     </template>
   </Faq>
 
-</div>
+    <div class="faq-box__divider">
+
+    </div>
+  </div>
 </template>
 
 <script>

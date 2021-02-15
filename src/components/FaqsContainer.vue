@@ -1,7 +1,12 @@
 <template>
 <div class="faqs-container">
-  <LogoBox></LogoBox>
-  <FaqsBox></FaqsBox>
+  <div class="left-side">
+    <LogoBox></LogoBox>
+  </div>
+
+  <div class="right-side">
+    <FaqsBox></FaqsBox>
+  </div>
 </div>
 </template>
 

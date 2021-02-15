@@ -3,25 +3,14 @@
   flex-direction: column;
   justify-content: center;
   align-content: start;
-  //padding: 1rem 2rem 0 2rem;
-  margin-right: 2rem;
-  margin-left: 2rem;
-  padding-top: 2rem;
+  justify-items: center;
   border-radius: 2px;
   overflow: hidden;
+  padding: 2rem 0 2rem 0;
 
   &:hover {
     cursor: pointer;
   }
-
-  //clip-path: margin-box;
-  //clip-path: polygon(
-  //                calc(0% + 5px) calc(0% + 5px), /* top left */
-  //                calc(100% - 5px) calc(0% + 5px), /* top right */
-  //
-  //                calc(100% - 5px) calc(100% - 5px), /* bottom right */
-  //                calc(0% + 5px) calc(100% - 5px) /* bottom left */
-  //);
 
   &__icon {
     margin-left: 1.5rem;
@@ -38,14 +27,13 @@
     color: $primary;
     font-weight: $font-weight-normal;
     font-size: 1.2rem;
-    margin-bottom: 1.5rem;
 
   }
 
   &__answer {
     color: $text-grey-light;
     font-weight: $font-weight-normal;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     padding-right: 3.5rem;
 
   }
