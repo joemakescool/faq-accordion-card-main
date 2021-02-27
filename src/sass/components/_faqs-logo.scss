@@ -6,13 +6,28 @@
   background-repeat: no-repeat;
   background-size: 200% 190%;
   background-position: -49rem -30rem;
+
+  @include respond(tab-port) {
+    margin: 0 auto;
+    width: 240px;
+    height: 104px;
+    background-image: url("~@/assets/images/bg-pattern-mobile.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+
 }
 
 .faqs-logo {
   height: inherit;
-
   //clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   clip-path: inset(0 round 2rem 0 0 2rem);
+
+  @include respond(tab-port) {
+    clip-path: none;
+  }
 
 }
 
@@ -27,6 +42,13 @@
   left: 50%;
   transform: translate(-64%, -50%);
 
+  @include respond(tab-port) {
+    transform: translate(-56%, -81%);
+    width: 266px;
+    height: 196px;
+    background-image: url("~@/assets/images/illustration-woman-online-mobile.svg");
+    background-size: contain;
+  }
 
 }
 
@@ -35,11 +57,28 @@
   position: absolute;
   height: 191px;
   width: 184px;
-  background-image: url('~@/assets/images/illustration-box-desktop.svg');
+  // background-image: url('~@/assets/images/illustration-box-desktop.svg');
   top: 42%;
   left: -9.5rem;
-
-
   background-repeat: no-repeat;
   z-index: 15;
+
+  @include respond(tab-port) {
+    display: none;
+  }
+
 }
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 1rem;
+  font-size: 11px;
+
+  @include respond(tab-port) {
+    display: none;
+  }
+
+}
+.attribution a { color: hsl(228, 45%, 44%); }

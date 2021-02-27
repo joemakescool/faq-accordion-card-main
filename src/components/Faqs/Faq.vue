@@ -1,5 +1,9 @@
 <template>
 
+  <transition
+    @appear="faqsAppear"
+  >
+
   <div
     class="faq-box"
     @click="clickShowAnswer($event)"
@@ -31,7 +35,7 @@
     </transition>
 
   </div>
-
+  </transition>
 </template>
 
 <script>
@@ -58,7 +62,39 @@ export default {
       this.showAnswer = !this.showAnswer
     },
 
+    faqsAppear () {
+      gsap.fromTo(
+        '.' + 'faq-box',
+        {
+          x: 20,
+          autoAlpha: 0
+        },
+        {
+          ease: 'power3.out',
+          x: 0,
+          autoAlpha: 1,
+          duration: 0.600,
+          stagger: 0.2
+        }
+      )
+    },
+
     enterEl (el, done) {
+      anime({
+        targets: '.box-logo',
+        easing: 'easeOutQuint',
+        translateX: -40,
+        duration: 600
+      })
+
+      anime({
+        targets: '#aSymbol',
+        stroke: '#e5e5e5',
+        strokeDashoffset: [anime.setDashoffset, 0],
+        easing: 'easeOutQuint',
+        duration: 1500
+      })
+
       anime({
         targets: '#arrow' + this.id,
         rotate: 180,
@@ -97,6 +133,21 @@ export default {
     },
 
     leaveEl (el, done) {
+      anime({
+        targets: '.box-logo',
+        easing: 'easeOutQuint',
+        translateX: 0,
+        duration: 600
+      })
+
+      anime({
+        targets: '#aSymbol',
+        stroke: '#3E2928',
+        strokeDashoffset: [anime.setDashoffset, 0],
+        easing: 'easeOutQuint',
+        duration: 1500
+      })
+
       anime({
         targets: '#arrow' + this.id,
         rotate: 0,

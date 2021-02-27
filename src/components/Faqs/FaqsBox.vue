@@ -1,7 +1,11 @@
 <template>
 
   <div class="faqs-box">
-    <h1 class="faqs-box__title">FAQ</h1>
+    <transition @appear="titleAppears">
+      <div class="faqs-box__title--box">
+        <h1 class="faqs-box__title">F</h1><h1 class="faqs-box__title">A</h1><h1 class="faqs-box__title">Q</h1>
+      </div>
+    </transition>
 
   <Faq id="faq1">
     <template v-slot:question>
@@ -78,11 +82,40 @@
 
 <script>
 import Faq from '@/components/Faqs/Faq'
+import anime from 'animejs/lib/anime.es.js'
 
 export default {
   name: 'FaqsBox',
   components: {
     Faq
+  },
+
+  methods: {
+    titleAppears () {
+      anime({
+        targets: '.faqs-box__title',
+        translateX: [20, 0],
+        opacity: [0, 1],
+        easing: 'easeOutQuint',
+        delay: anime.stagger(100),
+        duration: 600
+      })
+
+      // gsap.fromTo(
+      //   '.' + 'faqs-box__title',
+      //   {
+      //     x: 20,
+      //     autoAlpha: 0
+      //   },
+      //   {
+      //     ease: 'power3.out',
+      //     x: 0,
+      //     autoAlpha: 1,
+      //     duration: .600,
+      //     stagger: .2
+      //   }
+      // )
+    }
   }
 }
 </script>

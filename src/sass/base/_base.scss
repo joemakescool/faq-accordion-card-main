@@ -32,7 +32,10 @@ body {
 
   background: linear-gradient(rgba($soft-violet, .8), rgba($soft-blue, .8));
 
+  @include respond(tab-port) {
+    padding: 0 2rem;
+  }
+
 }
 
-.attribution { font-size: 11px; }
-.attribution a { color: hsl(228, 45%, 44%); }
+

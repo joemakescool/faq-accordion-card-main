@@ -6,19 +6,38 @@
   gap: 2rem;
   width: 90rem;
   height: 100%;
-  background-repeat: no-repeat;
-  background-size: contain;
+
+  @include respond(tab-port) {
+    display: grid;
+    align-self: center;
+    padding: 0 2rem;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
 }
 
 .right-side {
 
-    grid-template-columns: 2 / 3;
+  grid-column: 2 / 3;
   margin-right: 6rem;
   padding: 8rem 0;
+
+  @include respond(tab-port) {
+    grid-column: 1 / 2;
+    margin-right: 0;
+    padding: 0;
+  }
+
 }
 
 .left-side {
-  grid-template-columns: 1 / 2;
-  position: relative;
+  grid-column: 1 / 2;
 
+  @include respond(tab-port) {
+    position: relative;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
 }
